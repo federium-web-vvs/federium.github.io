@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FEDERIUM - Catálogo</title>
+    <style>
+        body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 20px; }
+        h1 { font-size: 40px; letter-spacing: 5px; margin-bottom: 40px; }
+        .contenedor { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .tarjeta { border: 1px solid #333; padding: 20px; width: 250px; border-radius: 10px; transition: 0.3s; }
+        .tarjeta:hover { border-color: white; background-color: #111; }
+        .precio { color: gray; font-size: 20px; margin: 15px 0; }
+        button { background: white; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
+        .volver { margin-top: 50px; display: block; color: gray; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <h1>CATÁLOGO</h1>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h3>Artículo 1</h3>
+            <p class="precio">$50.00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="tarjeta">
+            <h3>Artículo 2</h3>
+            <p class="precio">$85.00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="tarjeta">
+            <h3>Artículo 3</h3>
+            <p class="precio">$120.00</p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <a href="index.html" class="volver">← Volver al inicio</a>
+</body>
+</html>
