@@ -2,107 +2,113 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Federium - Catálogo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federium - Servicios y Precios</title>
     <style>
         body {
             margin: 0;
-            background-color: black;
-            color: white;
+            background: #000;
+            color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
             padding: 40px 20px;
         }
-        h2 {
-            font-size: 35px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-            text-shadow: 0 0 10px #00a2ff;
+        h1, h2 {
+            color: #00d4ff;
         }
-        .contenedor-productos {
+        h1 { font-size: 3.5rem; margin: 40px 0; letter-spacing: 4px; }
+        h2 { font-size: 2.8rem; margin: 60px 0 40px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #111;
+            border: 2px solid #00d4ff33;
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 30px rgba(0,212,255,0.4);
+        }
+        .price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #00ff88;
+            margin: 20px 0;
+        }
+        .payments {
             display: flex;
-            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 1000px;
+            gap: 40px;
+            font-size: 1.8rem;
+            margin: 50px 0;
         }
-        .tarjeta {
-            background: #111;
-            border: 2px solid #222;
-            border-radius: 15px;
-            padding: 30px;
-            width: 200px;
-            text-align: center;
-            transition: 0.4s;
-        }
-        .tarjeta:hover {
-            border-color: #00a2ff;
-            box-shadow: 0 0 20px #00a2ff;
-            transform: translateY(-10px);
-        }
-        .tarjeta h3 { margin: 0; font-size: 24px; color: #00a2ff; }
-        .tarjeta .precio { font-size: 30px; font-weight: bold; margin: 20px 0; }
-        .boton-comprar {
-            background-color: white;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
+        .btn-whatsapp {
             display: inline-block;
-            transition: 0.3s;
+            background: #00ff88;
+            color: #000;
+            padding: 18px 50px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 40px 0;
+            transition: all 0.3s;
         }
-        .tarjeta:hover .boton-comprar { background-color: #00a2ff; color: white; }
-        
-        /* Estilos Métodos de Pago */
-        .seccion-pagos { margin-top: 80px; text-align: center; }
-        .seccion-pagos h3 { font-size: 16px; letter-spacing: 3px; color: #666; margin-bottom: 20px; }
-        .metodos-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .metodo {
-            border: 1px solid #333;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 11px;
-            color: #888;
+        .btn-whatsapp:hover {
+            background: #00d4ff;
+            transform: scale(1.05);
         }
-        .boton-volver { margin-top: 60px; color: #555; text-decoration: none; font-size: 13px; }
     </style>
 </head>
 <body>
 
-    <h2>SERVICIOS</h2>
+    <div class="container">
+        <h1>FEDERIUM</h1>
+        <h2>Servicios y Precios</h2>
 
-    <div class="contenedor-productos">
-        <div class="tarjeta">
-            <h3>VIDEO</h3>
-            <p class="precio">20$</p>
-            <a href="#" class="boton-comprar">ADQUIRIR</a>
+        <div class="grid">
+            <div class="card">
+                <h3>Edición de Foto</h3>
+                <div class="price">10$</div>
+                <p>Retoque pro, color, fondos, efectos. Entrega 24-48h.</p>
+            </div>
+            <div class="card">
+                <h3>Edición de Video</h3>
+                <div class="price">20$</div>
+                <p>Cortes, transiciones, música, subtítulos. Hasta 5 min.</p>
+            </div>
+            <div class="card">
+                <h3>Chat / Asesoría</h3>
+                <div class="price">15$</div>
+                <p>1 hora personalizada: tips, software, estrategias redes.</p>
+            </div>
         </div>
-        <div class="tarjeta">
-            <h3>FOTO</h3>
-            <p class="precio">10$</p>
-            <a href="#" class="boton-comprar">ADQUIRIR</a>
+
+        <h2>Métodos de Pago</h2>
+        <div class="payments">
+            <span>PayPal</span>
+            <span>Binance</span>
+            <span>Zelle</span>
+            <span>Pago Móvil</span>
         </div>
-        <div class="tarjeta">
-            <h3>CHAT</h3>
-            <p class="precio">15$</p>
-            <a href="#" class="boton-comprar">ADQUIRIR</a>
-        </div>
+
+        <h2>¡Contáctame ya!</h2>
+        <a href="https://wa.me/584241372433?text=Hola%20Federium%2C%20quiero%20contratar%20%5Bfoto/video/chat%5D" class="btn-whatsapp" target="_blank">
+            +58 424-1372433 (WhatsApp)
+        </a>
+        <p style="font-size: 1.3rem; opacity: 0.8;">Respondo rápido • Coordinamos pago y detalles por chat</p>
     </div>
-
-    <div class="seccion-pagos">
-        <h3>MÉTODOS DE PAGO ACCEPTADOS</h3>
-        <div class="metodos-grid">
-            <div class="metodo">PAYPAL</div>
-            <div class="metodo">BINANCE</div>
-            <div class="metodo">ZELLE</div>
-            <div class="metodo">PAGO MÓVIL</div>
-        </div>
-    </div>
-
-    <a href="index.html" class="boton-volver">← Volver al inicio</a>
 
 </body>
 </html>
