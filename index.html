@@ -2,60 +2,208 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Federium - Future Retail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federium - Future Retail | Edición Profesional</title>
     <style>
-        body {
+        * {
             margin: 0;
-            background-color: black;
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #000;
+            color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            height: 100vh;
+            min-height: 700px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            flex-direction: column;
             text-align: center;
+            background: linear-gradient(to bottom, #001122, #000);
+            position: relative;
         }
-        img {
-            width: 500px;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 0 15px #00a2ff);
-            border-radius: 10px;
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 212, 255, 0.15), transparent 40%);
+            pointer-events: none;
+        }
+        img.logo {
+            width: 280px;
+            max-width: 80%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 25px #00d4ff);
+            border-radius: 20px;
         }
         h1 {
-            font-size: 45px;
-            letter-spacing: 12px;
-            margin: 10px 0;
+            font-size: 3.8rem;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
             text-transform: uppercase;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .boton {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background-color: white;
-            color: black;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
+        .tagline {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            background: #00d4ff;
+            color: #000;
+            padding: 16px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.6);
+            background: #00ff88;
+        }
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #00d4ff;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #111;
+            border: 2px solid #00d4ff33;
+            border-radius: 20px;
+            padding: 40px 25px;
+            transition: all 0.4s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: #00d4ff;
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
+        }
+        .card h3 {
+            font-size: 2rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #00ff88;
+        }
+        .payments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            font-size: 1.8rem;
+            margin: 40px 0;
+        }
+        .contact {
+            font-size: 2rem;
+            margin-top: 60px;
+        }
+        .whatsapp-big {
+            color: #00ff88;
             text-decoration: none;
             font-weight: bold;
-            font-size: 18px;
-            border-radius: 4px;
         }
-        .boton:hover {
-            background-color: #00a2ff;
-            color: white;
-            box-shadow: 0 0 20px #00a2ff;
+        footer {
+            padding: 40px 0;
+            background: #001122;
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.5rem; }
+            .btn { padding: 14px 30px; font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <img src="logo.png" alt="Federium Logo">
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Federium Logo" class="logo">
+            <h1>FEDERIUM</h1>
+            <p class="tagline">FUTURE RETAIL - Edición Profesional de Fotos y Videos</p>
+            <a href="https://wa.me/584241372433?text=Hola%21%20Quiero%20contratar%20un%20servicio%20de%20edici%C3%B3n" class="btn" target="_blank">¡ADQUIRIR AHORA!</a>
+        </div>
+    </header>
 
-    <h1>FEDERIUM</h1>
+    <section id="servicios">
+        <div class="container">
+            <h2>Servicios Disponibles</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Edición de Foto</h3>
+                    <div class="price">10$</div>
+                    <p>Retoque profesional, color grading, remoción de fondos, efectos creativos. Entrega rápida (24-48h).</p>
+                </div>
+                <div class="card">
+                    <h3>Edición de Video</h3>
+                    <div class="price">20$</div>
+                    <p>Cortes dinámicos, transiciones, música, subtítulos, color grading. Hasta 3-5 minutos. Ideal para redes.</p>
+                </div>
+                <div class="card">
+                    <h3>Chat / Asesoría</h3>
+                    <div class="price">15$</div>
+                    <p>1 hora de asesoría personalizada por chat o llamada: tips de edición, software, estrategias para redes sociales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <a href="https://wa.me/584241372433" class="boton" target="_blank">ADQUIRIR</a>
+    <section id="pagos" style="background: #0a0a0a;">
+        <div class="container">
+            <h2>Métodos de Pago Aceptados</h2>
+            <div class="payments">
+                <span>PayPal</span>
+                <span>Binance Pay</span>
+                <span>Zelle</span>
+                <span>Pago Móvil (Venezuela)</span>
+            </div>
+            <div class="contact">
+                Contáctame directamente por WhatsApp:<br><br>
+                <a href="https://wa.me/584241372433?text=Hola%20Federium%2C%20quiero%20info%20de%20precios%20y%20entrega" class="whatsapp-big">
+                    +58 424-1372433
+                </a>
+                <p style="margin-top: 20px; font-size: 1.3rem;">Respondo en minutos • Coordinamos todo por chat</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Federium - Future Retail. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
-
